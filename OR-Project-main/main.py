@@ -6,12 +6,12 @@ from Algorithms.gurobi_hybrid import GurobiHybridOptimization
 
 def main():
     #Parameters
-    N = 9
+    N = 50
     s = 3
     T = 16
     delta_T = 0.5
     seed = 4
-    timeout = 10
+    timeout = 0
 
     algorithms = []
     algorithms.append(HeuristicOptimization())
