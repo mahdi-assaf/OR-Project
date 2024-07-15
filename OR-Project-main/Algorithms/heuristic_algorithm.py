@@ -11,7 +11,7 @@ class HeuristicOptimization:
     def calculate_current_battery_levels(self, B_matrix, r, d, Y_matrix, U_matrix, t, delta_t):
         if t > 0:
             for i in range(len(B_matrix)):
-                B_matrix[i, t] = B_matrix[i, t - 1] + Y_matrix[i, t - 1] * r[i] * delta_t + Y_matrix[i, t - 1] * U_matrix[i, t - 1] * d[i] * delta_t - U_matrix[i, t - 1] * d[i] * delta_t
+                B_matrix[i, t] = B_matrix[i, t - 1] + Y_matrix[i, t - 1] * r[i] * delta_t + Y_matrix[i, t - 1] * d[i] * delta_t - U_matrix[i, t - 1] * d[i] * delta_t
 
     def forecast_next_battery_levels(self, B_matrix, d, t, delta_t):
         return B_matrix[:, t] - d * delta_t
