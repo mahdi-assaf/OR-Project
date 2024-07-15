@@ -14,7 +14,7 @@ def main():
     delta_T = 0.5
     num_time_slots = math.ceil(T / delta_T)
 
-    ranges = [39]  # Define the range of N values to investigate
+    ranges = [5]  # Define the range of N values to investigate
     timeout = 39
 
     for N in ranges:
